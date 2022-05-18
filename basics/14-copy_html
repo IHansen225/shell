@@ -1,2 +1,2 @@
 #!/bin/bash
-cp $(find a -name "*.html") ..
+cp -r $(find . -name "*.html") ..
