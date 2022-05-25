@@ -1,2 +1,2 @@
 #!/bin/bash
-cat -c -1
+echo cat -c -1
