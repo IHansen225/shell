@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -d '\t' 1 
+echo$(cut -d '\t' -f1)
