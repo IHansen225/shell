@@ -1,2 +1,2 @@
 #!/bin/bash
-echo cat -c -1
+cut -c 1 acr | tr '\n' ' ' | tr -d ' '
