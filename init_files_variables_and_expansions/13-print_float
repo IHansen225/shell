@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $NUM | grep -o '^[0-9]*\.[0-9][0-9]'
+echo $NUM | grep '^[0-9]*\.[0-9][0-9]'
