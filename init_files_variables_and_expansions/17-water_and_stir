@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%o%x" $WATER $STIR
+echo $WATER $STIR
