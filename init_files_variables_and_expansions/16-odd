@@ -1,2 +1,2 @@
 #!/bin/bash
-paste | nl
+paste | nl | grep '     \b[0-9]*[02468]\b'
