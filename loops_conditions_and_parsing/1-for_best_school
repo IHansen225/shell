@@ -6,3 +6,4 @@ do
 	echo "Best school"
 	((i++))
 done
+>&2 echo "error"
