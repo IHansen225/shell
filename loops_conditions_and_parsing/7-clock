@@ -2,7 +2,7 @@
 #Clock script
 hours=0
 minutes=0
-while [ $hours -ne 12 ]
+while [ $hours -ne 13 ]
 do
     echo "Hour: $hours"
     ((hours++))
