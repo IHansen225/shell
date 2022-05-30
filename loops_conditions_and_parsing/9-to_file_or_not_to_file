@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 #Info about "School" file
-for i in $(find -name "school*")
+find . -name "school*" -print0 | while read -d $'\0' file
 do
-    if [ -e "$i" ]
+    if [ -e "$file" ]
     then
         echo "school file exists"
-        if [ -s "$i" ]
+        if [ -s "$file" ]
         then
             echo "school file is not empty"
         else
             echo "school file is empty"
         fi
-        if [ -f "$i" ]
+        if [ -f "$file" ]
         then
             echo "school is a regular file"
         fi
