@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Info about "School" file
-find . -name "school*" -print0 | while read -d $'\0' file
+find . -name "school*" -print0 | while read -rd $'\0' file
 do
     if [ -e "$file" ]
     then
