@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#Clock script
+hours=0
+minutes=0
+while [ $hours -ne 12 ]
+do
+    echo "Hour: $hours"
+    ((hours++))
+    while [ $minutes -ne 59 ]
+    do
+        ((minutes++))
+        echo "$minutes"
+    done
+    if [ $minutes -eq 59 ]
+    then
+        minutes=0
+    fi
+done;
