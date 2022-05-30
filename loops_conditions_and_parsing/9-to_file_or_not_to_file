@@ -7,6 +7,8 @@ do
     then
         echo "school file exists"
         exists=true
+    else
+        continue
     fi
 done
 if [ $exists -eq false ]
