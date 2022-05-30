@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Cut passwd
+cat /etc/passwd | while read line
+do
+    cut -d ":" -f1,3,6
+done
