@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#Info about "School" file
+exists=false
+for i in *
+do
+    if [ $i -eq school ]
+    then
+        echo "school file exists"
+        exists=true
+    fi
+done
+if [ $exists -eq false ]
+then
+    echo "school file does not exist"
+fi
