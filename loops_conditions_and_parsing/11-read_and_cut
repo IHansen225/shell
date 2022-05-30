@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Cut passwd
-less /etc/passwd | while read -r line
+less /etc/passwd | while read -r
 do
     cut -d ":" -f1,3,6
 done
