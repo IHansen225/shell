@@ -3,3 +3,4 @@
 awk -F' ' '{ print $1 " " $9 }' apache-access.log
 sort -nr
 uniq -c
+cut -d ' ' -f3
