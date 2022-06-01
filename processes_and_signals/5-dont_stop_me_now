@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #Kill process
 pid=$(pgrep -f infinity)
-kill $pid
+kill "$pid"
