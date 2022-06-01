@@ -1,2 +1,0 @@
-#!/bin/bash
-set AWA=13 & set UWU=17 | echo $(($awa=uwu))
