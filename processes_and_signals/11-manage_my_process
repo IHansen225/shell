@@ -6,13 +6,13 @@ case $param in
     'start')
         bash ./manage_my_process
         echo $$ > /var/run/my_process.pid
-        echo "manage_my_process started"
+        echo manage_my_process started
     ;;
 
     'stop')
-        pkill -f "manage_my_process"
+	kill -STOP -- "-$(pgrep manage)"
         rm -f "/var/run/my_process.pid"
-        echo "manage_my_process stopped"
+        echo manage_my_process stopped
     ;;
 
     'restart')
@@ -20,7 +20,7 @@ case $param in
         rm -f "/var/run/my_process.pid"
         bash ./manage_my_process
         echo $$ > /var/run/my_process.pid
-        echo "manage_my_process restarted"
+        echo manage_my_process restarted
     ;;
 
     *)
