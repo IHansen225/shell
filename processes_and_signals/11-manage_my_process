@@ -4,9 +4,8 @@ param="$1"
 case $param in
 
     'start')
-        bash ./manage_my_process
+        bash ./manage_my_process | echo manage_my_process started
         echo $$ > /var/run/my_process.pid
-        echo manage_my_process started
     ;;
 
     'stop')
