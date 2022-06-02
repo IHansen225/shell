@@ -1,30 +1,21 @@
 #!/usr/bin/env bash
 #Daemon
-param="$1"
-case $param in
-
-    'start')
-        bash ./manage_my_process;
-       	echo manage_my_process started;
-        echo $$ > /var/run/my_process.pid;
-    ;;
-
-    'stop')
-	kill -STOP -- "-$(pgrep manage)";
-        rm -f "/var/run/my_process.pid";
-        echo manage_my_process stopped;
-    ;;
-
-    'restart')
-        pkill -f "manage_my_process";
-        rm -f "/var/run/my_process.pid";
-        bash ./manage_my_process;
-        echo $$ > /var/run/my_process.pid;
-        echo manage_my_process restarted;
-    ;;
-
-    *)
-        echo "Usage: manage_my_process {start|stop|restart}";
-    ;;
-    
-esac
+param=$1
+if [ $param -eq 'start']
+then
+    bash ./manage_my_process
+    echo manage_my_process started;
+    echo $$ > /var/run/my_process.pid;
+elif [ $param -eq 'stop']
+    kill -STOP -- "-$(pgrep manage)";
+    rm -f "/var/run/my_process.pid";
+    echo manage_my_process stopped;
+elif [ $param -eq 'restart']
+    kill -STOP -- "-$(pgrep manage)";
+    rm -f "/var/run/my_process.pid";
+    bash ./manage_my_process;
+    echo $$ > /var/run/my_process.pid;
+    echo manage_my_process restarted;
+else
+    echo "Usage: manage_my_process {start|stop|restart}";
+fi
