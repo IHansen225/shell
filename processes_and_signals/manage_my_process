@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #Daemon
-while true
+i=0
+while [ $i -eq 0 ]
 do
     echo "I am alive!" >> /tmp/my_process
     sleep 2

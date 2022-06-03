@@ -3,23 +3,23 @@
 param=$1
 case $param in
     'start')
-        bash ./manage_my_process
-        echo manage_my_process started;
-        echo $$ > /var/run/my_process.pid;
+        echo manage_my_process started ;
+        echo $$ > /var/run/my_process.pid ;
+	bash ./manage_my_process
     ;;
     'stop')
-        kill -STOP -- "-$(pgrep manage)";
-        rm -f "/var/run/my_process.pid";
-        echo manage_my_process stopped;
+	echo manage_my_process stopped ;
+        rm -f "/var/run/my_process.pid" ;
+	pkill $(pgrep -f "manage_my_process") ;
     ;;
     'restart')
-        kill -STOP -- "-$(pgrep manage)";
-        rm -f "/var/run/my_process.pid";
-        bash ./manage_my_process;
-        echo $$ > /var/run/my_process.pid;
-        echo manage_my_process restarted;
+	echo $$ > /var/run/my_process.pid ;
+	echo manage_my_process restarted ;
+	pkill $(pgrep -f "manage_my_process") ;
+	rm -f "/var/run/my_process.pid" ;
+	bash ./manage_my_process
     ;;
     *)
-        echo "Usage: manage_my_process {start|stop|restart}";
+        echo "Usage: manage_my_process {start|stop|restart}" ;
     ;;
 esac
