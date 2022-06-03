@@ -10,12 +10,12 @@ case $param in
     'stop')
 	echo manage_my_process stopped ;
         rm -f "/var/run/my_process.pid" ;
-	pkill $(pgrep -f "manage_my_process") ;
+	pkill "$(pgrep -f "manage_my_process")" ;
     ;;
     'restart')
 	echo $$ > /var/run/my_process.pid ;
 	echo manage_my_process restarted ;
-	pkill $(pgrep -f "manage_my_process") ;
+	pkill "$(pgrep -f "manage_my_process")" ;
 	rm -f "/var/run/my_process.pid" ;
 	bash ./manage_my_process
     ;;
