@@ -1,4 +1,4 @@
-## Project: # Shell, init files, variables and expansions
+## Project: Shell, init files, variables and expansions
 ### Description:
 Global/local variables managing and Linux init file operation scripts
 ### Learning objectives:
