@@ -11,4 +11,3 @@ This repository contains Linux bash scripts for data manipulation and basic syst
 |[./loops_conditions_and_parsing](https://github.com/IHansen225/shell/tree/master/loops_conditions_and_parsing "loops_conditions_and_parsing")|Bash loops basic scripts|
 |[./processes_and_signals](https://github.com/IHansen225/shell/tree/master/processes_and_signals "processes_and_signals")|System signal and process management scripts|
 |--|--|
-|./test|Dummy files for testing|
