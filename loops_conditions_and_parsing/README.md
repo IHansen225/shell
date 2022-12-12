@@ -1,4 +1,4 @@
-## Project: # Shell, loops, conditions and parsing
+## Project: Shell, loops, conditions and parsing
 ### Description:
 Bash loops basic scripts.
 ### Learning objectives:
